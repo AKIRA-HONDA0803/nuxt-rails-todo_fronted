@@ -27,6 +27,8 @@ export default {
   },
   methods: {
     handleSubmit() {
+    //$emitはイベントをトリガーしたい時に使用
+      this.$emit("submit", this.title);
       this.title = "";
     },
   },

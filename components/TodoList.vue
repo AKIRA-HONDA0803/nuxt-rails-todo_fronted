@@ -20,21 +20,16 @@
 
 <script>
 export default {
+  props: ["todos"],
   data() {
     return {
-      todos: [
-        {
-          title: "test",
-          username: "太郎",
-        },
-      ],
       search: "",
       headers: [
         {
           text: "タイトル",
           align: "left",
           sortable: false,
-          value: "title",　
+          value: "title",
         },
         { text: "ユーザー名", value: "username" },
       ],
