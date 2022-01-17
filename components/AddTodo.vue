@@ -30,6 +30,7 @@ export default {
       return this.$store.state.auth.currentUser;
     },
   },
+
   methods: {
     handleSubmit() {
       const todo = {

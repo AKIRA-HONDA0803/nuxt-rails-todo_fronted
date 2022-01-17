@@ -1,6 +1,6 @@
 // Stateは「今どんな状態であるか」を保存しておく場所
 export const state = () => ({
-  currentUser: null
+  currentUser: {}
 });
 
 // MutationはStateの状態を変えるための方法
