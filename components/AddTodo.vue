@@ -25,10 +25,19 @@ export default {
       title: "",
     };
   },
+  computed: {
+    user() {
+      return this.$store.state.auth.currentUser;
+    },
+  },
   methods: {
     handleSubmit() {
-    //$emitはイベントをトリガーしたい時に使用
-      this.$emit("submit", this.title);
+      const todo = {
+        title: this.title,
+        user_id: this.user.id,
+      };
+      //$emitはイベントをトリガーしたい時に使用
+      this.$emit("submit", todo);
       this.title = "";
     },
   },
