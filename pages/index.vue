@@ -27,9 +27,6 @@ export default {
       return this.$store.state.auth.currentUser;
     },
   },
-  created() {
-    console.log("API_KEY:", process.env.API_KEY);
-  },
   methods: {
     async addTodo(todo) {
       const { data } = await axios.post("/v1/todos", { todo });
